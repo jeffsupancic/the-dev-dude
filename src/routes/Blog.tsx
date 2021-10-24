@@ -36,7 +36,7 @@ const Blog = () => {
       be.categories.every((c) => categories.includes(c))
     );
     // apply sort
-    if (sortOrder === "oldestFirst") {
+    if (sortOrder === "newestFirst") {
       newBlogEntries = newBlogEntries.reverse();
     }
     setBlogEntries(newBlogEntries);
