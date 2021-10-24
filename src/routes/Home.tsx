@@ -12,7 +12,7 @@ const Home = () => {
         }}
         variant="contained"
       >
-        Take me to the blog
+        Take me to the dude's blog
       </Button>
     </div>
   );
