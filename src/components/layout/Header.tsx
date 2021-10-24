@@ -51,7 +51,7 @@ const Header = () => {
               history.push("/");
             }}
           >
-            The Dude
+            Dev Dude
           </Button>
         </Toolbar>
       </AppBar>
