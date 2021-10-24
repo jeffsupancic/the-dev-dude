@@ -14,6 +14,7 @@ const BlogCategorySelect = ({
   return (
     <ToggleButtonGroup
       size="small"
+      color="info"
       value={categories}
       onChange={(e, categories) => {
         setCategories(categories);

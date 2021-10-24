@@ -18,6 +18,7 @@ const BlogSortOrderSelect = ({
       <InputLabel>Sort by</InputLabel>
       <Select
         size="small"
+        color="info"
         value={sortOrder}
         onChange={(e) => {
           setSortOrder(e.target.value);

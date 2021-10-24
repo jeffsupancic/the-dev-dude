@@ -76,7 +76,13 @@ export default function BlogEntry({
             {date}
             <Stack direction="row" spacing={1}>
               {categories.map((category) => {
-                return <Chip key={category} label={startCase(category)} />;
+                return (
+                  <Chip
+                    color="info"
+                    key={category}
+                    label={startCase(category)}
+                  />
+                );
               })}
             </Stack>
           </>
