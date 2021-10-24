@@ -7,6 +7,8 @@ const Blog = () => {
       2. hosted with digital ocean apps which easily wraps this app in a contianer and created a yaml file for you https://www.digitalocean.com/ with automatic deploy on commit to main branch
       3. added react router for code splitting
       4. added mui v5 didn't use styled-components
+      5. added theme provider
+
 
 
       TODO:
@@ -18,7 +20,8 @@ const Blog = () => {
       6. add .env variable
       7. add / fix unit tests on github / site
       8. test out emotion instead of jss
-      9. mui theme
+      9. mui theme - try theme creator?
+      10. custom hook for 
       `}
     </div>
   );

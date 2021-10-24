@@ -1,3 +1,6 @@
+// react
+import { useHistory } from "react-router-dom";
+// mui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,6 +10,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
+  const history = useHistory();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -23,7 +28,22 @@ const Header = () => {
           {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Jeff Supancic
           </Typography> */}
-          <Button color="inherit">Home</Button>
+          <Button
+            color="inherit"
+            onClick={() => {
+              history.push("/");
+            }}
+          >
+            Home
+          </Button>
+          <Button
+            color="inherit"
+            onClick={() => {
+              history.push("/blog");
+            }}
+          >
+            Blog
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

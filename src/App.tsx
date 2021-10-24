@@ -18,8 +18,8 @@ const darkTheme = createTheme({
 const App = () => (
   <ThemeProvider theme={darkTheme}>
     <CssBaseline />
-    <Header />
     <Router>
+      <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route exact path="/" component={Home} />
