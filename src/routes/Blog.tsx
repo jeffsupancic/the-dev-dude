@@ -17,6 +17,8 @@ const Blog = () => {
       5. show some data fetching
       6. add .env variable
       7. add / fix unit tests on github / site
+      8. test out emotion instead of jss
+      9. mui theme
       `}
     </div>
   );
