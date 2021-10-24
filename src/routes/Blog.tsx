@@ -53,8 +53,6 @@ const Blog = () => {
       4. added mui v5 didn't use styled-components
       5. added theme provider
 
-
-
       TODO:
       1. add more lint rules
       2. configure prettier
@@ -66,6 +64,9 @@ const Blog = () => {
       8. test out emotion instead of jss
       9. mui theme - try theme creator?
       10. custom hook for 
+      11. wire up share
+      12. wire up <3
+      13. move todo list
       `}
       </div> */}
       <Grid container spacing={1}>
