@@ -15,6 +15,9 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
+// dd
+import CodeSnippet from "../shared/CodeSnippet";
+
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }
@@ -35,9 +38,16 @@ interface BlogEntryProps {
   date: string;
   title: string;
   body: string;
+  code?: string;
 }
 
-export default function BlogEntry({ id, date, title, body }: BlogEntryProps) {
+export default function BlogEntry({
+  id,
+  date,
+  title,
+  body,
+  code,
+}: BlogEntryProps) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -66,6 +76,7 @@ export default function BlogEntry({ id, date, title, body }: BlogEntryProps) {
         <Typography variant="body2" color="text.secondary">
           {body}
         </Typography>
+        {code && <CodeSnippet code={code} />}
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">

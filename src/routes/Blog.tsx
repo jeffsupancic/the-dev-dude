@@ -32,18 +32,21 @@ const Blog = () => {
       `}
       </div> */}
       <Grid container spacing={1}>
-        {blogEntries.map((blogEntry) => {
-          return (
-            <Grid key={blogEntry.id} item xs={12}>
-              <BlogEntry
-                id={blogEntry.id}
-                date={blogEntry.date}
-                title={blogEntry.title}
-                body={blogEntry.body}
-              ></BlogEntry>
-            </Grid>
-          );
-        })}
+        {blogEntries
+          .map((blogEntry) => {
+            return (
+              <Grid key={blogEntry.id} item xs={12}>
+                <BlogEntry
+                  id={blogEntry.id}
+                  date={blogEntry.date}
+                  title={blogEntry.title}
+                  body={blogEntry.body}
+                  code={blogEntry.code}
+                ></BlogEntry>
+              </Grid>
+            );
+          })
+          .reverse()}
       </Grid>
     </>
   );
