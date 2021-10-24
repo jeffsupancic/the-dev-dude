@@ -1,10 +1,47 @@
+// react
+import { useEffect, useState } from "react";
 // mui
 import Grid from "@mui/material/Grid";
 // dd
-import blogEntries from "../data/blogEntries";
+import blogEntriesData from "../data/blogEntries";
 import BlogEntry from "../components/blog/BlogEntry";
+import BlogCategorySelect from "../components/blog/BlogCategorySelect";
+import BlogSortOrderSelect from "../components/blog/BlogSortOrderSelect";
+// utils
+import { cloneDeep } from "lodash";
 
 const Blog = () => {
+  const [blogEntries, setBlogEntries] = useState<
+    {
+      id: number;
+      categories: string[];
+      date: string;
+      title: string;
+      body: string;
+      code?: string;
+    }[]
+  >([]);
+  const [sortOrder, setSortOrder] = useState("newestFirst");
+  const [categories, setCategories] = useState([
+    "frontend",
+    "backend",
+    "hosting",
+    "javascript",
+  ]);
+
+  useEffect(() => {
+    let newBlogEntries = cloneDeep(blogEntriesData);
+    // apply filter
+    newBlogEntries = newBlogEntries.filter((be) =>
+      be.categories.every((c) => categories.includes(c))
+    );
+    // apply sort
+    if (sortOrder === "oldestFirst") {
+      newBlogEntries = newBlogEntries.reverse();
+    }
+    setBlogEntries(newBlogEntries);
+  }, [sortOrder, categories]);
+
   return (
     <>
       {/* <div>
@@ -32,21 +69,35 @@ const Blog = () => {
       `}
       </div> */}
       <Grid container spacing={1}>
-        {blogEntries
-          .map((blogEntry) => {
-            return (
-              <Grid key={blogEntry.id} item xs={12}>
-                <BlogEntry
-                  id={blogEntry.id}
-                  date={blogEntry.date}
-                  title={blogEntry.title}
-                  body={blogEntry.body}
-                  code={blogEntry.code}
-                ></BlogEntry>
-              </Grid>
-            );
-          })
-          .reverse()}
+        <Grid item xs={12}>
+          <Grid container spacing={1} alignItems="center">
+            <Grid item>
+              <BlogSortOrderSelect
+                sortOrder={sortOrder}
+                setSortOrder={setSortOrder}
+              />
+            </Grid>
+            <Grid item>
+              <BlogCategorySelect
+                categories={categories}
+                setCategories={setCategories}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        {blogEntries.map((blogEntry) => {
+          return (
+            <Grid key={blogEntry.id} item xs={12}>
+              <BlogEntry
+                id={blogEntry.id}
+                date={blogEntry.date}
+                title={blogEntry.title}
+                body={blogEntry.body}
+                code={blogEntry.code}
+              ></BlogEntry>
+            </Grid>
+          );
+        })}
       </Grid>
     </>
   );
