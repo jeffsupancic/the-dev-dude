@@ -8,6 +8,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import { green } from "@mui/material/colors";
 
 const Header = () => {
   const history = useHistory();
@@ -25,8 +28,14 @@ const Header = () => {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Welcome to the Dev Dude!
+          <Typography component="div" sx={{ flexGrow: 1 }}>
+            <IconButton
+              onClick={() => {
+                history.push("/");
+              }}
+            >
+              <Avatar sx={{ bgcolor: green[500] }}>DD</Avatar>
+            </IconButton>
           </Typography>
           <Button
             color="inherit"
