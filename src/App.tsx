@@ -1,5 +1,8 @@
+// react
 import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// mui
+import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 
@@ -20,12 +23,14 @@ const App = () => (
     <CssBaseline />
     <Router>
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/blog" component={Blog} />
-        </Switch>
-      </Suspense>
+      <Box p={1}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/blog" component={Blog} />
+          </Switch>
+        </Suspense>
+      </Box>
     </Router>
   </ThemeProvider>
 );

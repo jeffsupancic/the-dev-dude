@@ -25,17 +25,9 @@ const Header = () => {
           >
             <MenuIcon />
           </IconButton> */}
-          {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Jeff Supancic
-          </Typography> */}
-          <Button
-            color="inherit"
-            onClick={() => {
-              history.push("/");
-            }}
-          >
-            Home
-          </Button>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Welcome to the Dev Dude!
+          </Typography>
           <Button
             color="inherit"
             onClick={() => {
@@ -43,6 +35,14 @@ const Header = () => {
             }}
           >
             Blog
+          </Button>
+          <Button
+            color="inherit"
+            onClick={() => {
+              history.push("/");
+            }}
+          >
+            The Dude
           </Button>
         </Toolbar>
       </AppBar>

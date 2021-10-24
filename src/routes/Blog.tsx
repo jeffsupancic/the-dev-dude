@@ -1,7 +1,14 @@
+// mui
+import Grid from "@mui/material/Grid";
+// dd
+import blogEntries from "../data/blogEntries";
+import BlogEntry from "../components/blog/BlogEntry";
+
 const Blog = () => {
   return (
-    <div>
-      {`
+    <>
+      {/* <div>
+        {`
       Steps followed to setup this personal portfolio:
       1. followed create react app as a starter https://create-react-app.dev/ using the type script template chose to use npm
       2. hosted with digital ocean apps which easily wraps this app in a contianer and created a yaml file for you https://www.digitalocean.com/ with automatic deploy on commit to main branch
@@ -23,7 +30,22 @@ const Blog = () => {
       9. mui theme - try theme creator?
       10. custom hook for 
       `}
-    </div>
+      </div> */}
+      <Grid container spacing={1}>
+        {blogEntries.map((blogEntry) => {
+          return (
+            <Grid key={blogEntry.id} item xs={12}>
+              <BlogEntry
+                id={blogEntry.id}
+                date={blogEntry.date}
+                title={blogEntry.title}
+                body={blogEntry.body}
+              ></BlogEntry>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </>
   );
 };
 
