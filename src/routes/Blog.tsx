@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 // mui
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 // dd
 import blogEntriesData from "../data/blogEntries";
 import BlogEntry from "../components/blog/BlogEntry";
@@ -99,6 +101,13 @@ const Blog = () => {
             </Grid>
           );
         })}
+        {/* <Grid item xs={12}>
+          <Box textAlign="center">
+            <Button color="primary" onClick={() => {}}>
+              Load More...
+            </Button>
+          </Box>
+        </Grid> */}
       </Grid>
     </>
   );

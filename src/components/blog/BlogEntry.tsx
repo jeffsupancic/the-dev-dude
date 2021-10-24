@@ -57,12 +57,12 @@ export default function BlogEntry({
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar sx={{ bgcolor: green[500] }}>{id}</Avatar>}
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        avatar={<Avatar sx={{ bgcolor: green[500] }}>DD</Avatar>}
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
         title={title}
         subheader={date}
       />
