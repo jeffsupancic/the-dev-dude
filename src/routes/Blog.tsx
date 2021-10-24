@@ -25,10 +25,10 @@ const Blog = () => {
   >([]);
   const [sortOrder, setSortOrder] = useState("newestFirst");
   const [categories, setCategories] = useState([
-    "frontend",
-    "backend",
+    "frontEnd",
+    "backEnd",
     "hosting",
-    "javascript",
+    "javaScript",
   ]);
 
   useEffect(() => {
@@ -93,6 +93,7 @@ const Blog = () => {
             <Grid key={blogEntry.id} item xs={12}>
               <BlogEntry
                 id={blogEntry.id}
+                categories={blogEntry.categories}
                 date={blogEntry.date}
                 title={blogEntry.title}
                 body={blogEntry.body}

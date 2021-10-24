@@ -14,6 +14,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Chip from "@mui/material/Chip";
+
+// utils
+import { startCase } from "lodash";
 
 // dd
 import CodeSnippet from "../shared/CodeSnippet";
@@ -35,6 +39,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 interface BlogEntryProps {
   id: number;
+  categories: string[];
   date: string;
   title: string;
   body: string;
@@ -43,6 +48,7 @@ interface BlogEntryProps {
 
 export default function BlogEntry({
   id,
+  categories,
   date,
   title,
   body,
@@ -64,7 +70,13 @@ export default function BlogEntry({
         //   </IconButton>
         // }
         title={title}
-        subheader={date}
+        subheader={
+          <>
+            {categories.map((category) => {
+              return <Chip key={category} label={startCase(category)} />;
+            })}
+          </>
+        }
       />
       {/* <CardMedia
         component="img"

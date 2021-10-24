@@ -19,10 +19,10 @@ const BlogCategorySelect = ({
         setCategories(categories);
       }}
     >
-      <ToggleButton value="frontend">Front End</ToggleButton>
-      <ToggleButton value="backend">Back End</ToggleButton>
+      <ToggleButton value="frontEnd">Front End</ToggleButton>
+      <ToggleButton value="backEnd">Back End</ToggleButton>
       <ToggleButton value="hosting">Hosting</ToggleButton>
-      <ToggleButton value="javascript">JavaScript</ToggleButton>
+      <ToggleButton value="javaScript">JavaScript</ToggleButton>
     </ToggleButtonGroup>
   );
 };

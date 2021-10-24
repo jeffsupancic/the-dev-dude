@@ -1,7 +1,7 @@
 const blogEntries = [
   {
     id: 1,
-    categories: ["frontend"],
+    categories: ["frontEnd"],
     date: "10/24/21",
     title: "Create React App",
     body: "This application was built by following the Create React App guide found here https://create-react-app.dev/",
