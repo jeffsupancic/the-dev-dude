@@ -15,6 +15,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 
 // utils
 import { startCase } from "lodash";
@@ -72,9 +73,12 @@ export default function BlogEntry({
         title={title}
         subheader={
           <>
-            {categories.map((category) => {
-              return <Chip key={category} label={startCase(category)} />;
-            })}
+            {date}
+            <Stack direction="row" spacing={1}>
+              {categories.map((category) => {
+                return <Chip key={category} label={startCase(category)} />;
+              })}
+            </Stack>
           </>
         }
       />

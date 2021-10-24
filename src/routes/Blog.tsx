@@ -35,7 +35,7 @@ const Blog = () => {
     let newBlogEntries = cloneDeep(blogEntriesData);
     // apply filter
     newBlogEntries = newBlogEntries.filter((be) =>
-      be.categories.every((c) => categories.includes(c))
+      be.categories.some((c) => categories.includes(c))
     );
     // apply sort
     if (sortOrder === "newestFirst") {
