@@ -78,6 +78,7 @@ export default function BlogEntry({
               {categories.map((category) => {
                 return (
                   <Chip
+                    size="small"
                     color="info"
                     key={category}
                     label={startCase(category)}
