@@ -1,0 +1,2 @@
+(this["webpackJsonpthe-dev-dude"]=this["webpackJsonpthe-dev-dude"]||[]).push([[5],{413:function(e,t,n){"use strict";n.r(t);var c=n(127),d=n(11),i=n(1);t.default=function(){var e=Object(d.f)();return Object(i.jsx)("div",{children:Object(i.jsx)(c.a,{onClick:function(){e.push("/blog")},variant:"contained",children:"Take me to the dude's blog"})})}}}]);
+//# sourceMappingURL=5.8481c03a.chunk.js.map
