@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Box p={1}>
       <Grid container spacing={1}>
-        <Grid item md={2}>
+        <Grid item lg={2}>
           <Paper elevation={2}>
             <Box p={1}>
               <Grid
@@ -77,7 +77,7 @@ const Home = () => {
             </Box>
           </Paper>
         </Grid>
-        <Grid item md={10}>
+        <Grid item lg={10}>
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <Paper elevation={2}>
@@ -103,19 +103,19 @@ const Home = () => {
               <Paper elevation={2}>
                 <Box p={1}>
                   <Grid container>
-                    <Grid item md={4}>
+                    <Grid item lg={4}>
                       <Typography variant="h5" color="text.primary" pt={1}>
                         Project Timeline
                       </Typography>
                       <Timeline />
                     </Grid>
-                    <Grid item md={4}>
+                    <Grid item lg={4}>
                       <Typography variant="h5" color="text.primary" pt={1}>
                         Project Features
                         {/* <Features /> */}
                       </Typography>
                     </Grid>
-                    <Grid item md={4}>
+                    <Grid item lg={4}>
                       <Typography variant="h5" color="text.primary" pt={1}>
                         Ideas
                       </Typography>
