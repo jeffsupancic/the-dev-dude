@@ -144,40 +144,38 @@ const Home = () => {
               </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Box>
-                <Grid container spacing={1}>
-                  <Grid item lg={4}>
-                    <Paper elevation={2}>
-                      <Box p={1}>
-                        <Typography variant="h5" color="text.primary" pt={1}>
-                          Project Timeline
-                        </Typography>
-                        <Timeline />
-                      </Box>
-                    </Paper>
-                  </Grid>
-                  <Grid item lg={4}>
-                    <Paper elevation={2}>
-                      <Box p={1}>
-                        <Typography variant="h5" color="text.primary" pt={1}>
-                          Project Features
-                        </Typography>
-                        <Features />
-                      </Box>
-                    </Paper>
-                  </Grid>
-                  <Grid item lg={4}>
-                    <Paper elevation={2}>
-                      <Box p={1}>
-                        <Typography variant="h5" color="text.primary" pt={1}>
-                          Project Ideas
-                        </Typography>
-                        <Ideas />
-                      </Box>
-                    </Paper>
-                  </Grid>
+              <Grid container spacing={1} display="inline-block">
+                <Grid item lg={4}>
+                  <Paper elevation={2}>
+                    <Box p={1}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Project Timeline
+                      </Typography>
+                      <Timeline />
+                    </Box>
+                  </Paper>
                 </Grid>
-              </Box>
+                <Grid item lg={4}>
+                  <Paper elevation={2}>
+                    <Box p={1}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Project Features
+                      </Typography>
+                      <Features />
+                    </Box>
+                  </Paper>
+                </Grid>
+                <Grid item lg={4}>
+                  <Paper elevation={2}>
+                    <Box p={1}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Project Ideas
+                      </Typography>
+                      <Ideas />
+                    </Box>
+                  </Paper>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
