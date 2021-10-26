@@ -11,6 +11,7 @@ import { green, grey } from "@mui/material/colors";
 // dd
 import devDudeImage from "../images/thedevdude.jpeg";
 import Timeline from "../components/home/Timeline";
+import Features from "../components/home/Features";
 
 const Home = () => {
   // hooks
@@ -46,10 +47,24 @@ const Home = () => {
                   <Avatar src={devDudeImage} sx={{ width: 200, height: 200 }} />
                 </Box>
               </Grid>
+              <Grid item xs={12}>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <Button
+                    color="info"
+                    size="small"
+                    onClick={() => {
+                      history.push("/blog");
+                    }}
+                    variant="contained"
+                  >
+                    Take me to the Dev Dude's blog
+                  </Button>
+                </Box>
+              </Grid>
             </Grid>
           </Grid>
           <Grid item md={10}>
-            <Typography variant="body1" color="text.primary">
+            <Typography variant="body1" color="text.secondary">
               Hi there! Thank you for visting my personal site, portfolio and
               playground. I'm planning to use this site as a place to learn,
               show off, and share some of the things I've learned working as a
@@ -63,27 +78,24 @@ const Home = () => {
               pt={1}
             ></Typography>
             <Grid container>
-              <Grid item md={6}>
-                <Typography variant="h5" color="primary" pt={1}>
+              <Grid item md={4}>
+                <Typography variant="h5" color="text.primary" pt={1}>
                   Project Timeline
                 </Typography>
                 <Timeline />
               </Grid>
-              <Grid item md={6}></Grid>
+              <Grid item md={4}>
+                <Typography variant="h5" color="text.primary" pt={1}>
+                  Project Features
+                  {/* <Features /> */}
+                </Typography>
+              </Grid>
+              <Grid item md={4}>
+                <Typography variant="h5" color="text.primary" pt={1}>
+                  Ideas
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid></Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Box display="flex" alignItems="center" justifyContent="center">
-              <Button
-                onClick={() => {
-                  history.push("/blog");
-                }}
-                variant="contained"
-              >
-                Take me to the Dev Dude's blog
-              </Button>
-            </Box>
           </Grid>
         </Grid>
       </Box>

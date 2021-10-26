@@ -10,12 +10,12 @@ const TimelineComponent = () => {
     <Stepper orientation="vertical">
       <Step active completed>
         <StepLabel>
-          <Typography variant="body1" color="text.primary">
+          <Typography variant="body1" color="text.secondary">
             Front End Application
           </Typography>
         </StepLabel>
         <StepContent>
-          <Typography variant="body2" color="text.primary">
+          <Typography variant="body2" color="text.secondary">
             GitHub &nbsp;
             <Link href="https://github.com/jeffsupancic/the-dev-dude">
               the-dev-dude
@@ -25,12 +25,12 @@ const TimelineComponent = () => {
       </Step>
       <Step active>
         <StepLabel error>
-          <Typography variant="body1" color="text.primary">
+          <Typography variant="body1" color="text.secondary">
             Back End Application
           </Typography>
         </StepLabel>
         <StepContent>
-          <Typography variant="body2" color="text.primary">
+          <Typography variant="body2" color="text.secondary">
             GitHub &nbsp;
             <Link href="https://github.com/jeffsupancic/the-dev-dude-server">
               the-dev-dude-server
