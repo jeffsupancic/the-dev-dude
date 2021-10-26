@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import CircularProgress from "@mui/material/CircularProgress";
 
 // components
 import Header from "./components/layout/Header";
@@ -24,7 +25,20 @@ const App = () => (
     <Router>
       <Header />
       <Box p={1}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <Box
+              p={1}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <CircularProgress size={100} />
+            </Box>
+          }
+        >
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
