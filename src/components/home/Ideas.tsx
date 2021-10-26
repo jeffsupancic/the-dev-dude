@@ -31,13 +31,19 @@ export default function NestedList() {
       <Collapse in={frontEndOpen} timeout="auto" unmountOnExit>
         <List component="div">
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="TypeScript" />
+            <ListItemText primary="Show unit test coverage on GitHub" />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="Hosting" />
+            <ListItemText primary="Wire up blog share button" />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="Material UI" />
+            <ListItemText primary="Wire up blog like button" />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Test out mui emotion" />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Enforce lint and unit tests with husky" />
           </ListItemButton>
         </List>
       </Collapse>
@@ -54,9 +60,9 @@ export default function NestedList() {
       </ListItemButton>
       <Collapse in={backEndOpen} timeout="auto" unmountOnExit>
         <List component="div">
-          {/* <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="1" />
-          </ListItemButton> */}
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Implement authn flow" />
+          </ListItemButton>
         </List>
       </Collapse>
     </List>

@@ -17,6 +17,7 @@ import Tooltip from "@mui/material/Tooltip";
 import devDudeImage from "../images/thedevdude.jpeg";
 import Timeline from "../components/home/Timeline";
 import Features from "../components/home/Features";
+import Ideas from "../components/home/Ideas";
 
 const Home = () => {
   // hooks
@@ -143,29 +144,40 @@ const Home = () => {
               </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Paper elevation={2}>
-                <Box p={1}>
-                  <Grid container>
-                    <Grid item lg={4}>
-                      <Typography variant="h5" color="text.primary" pt={1}>
-                        Project Timeline
-                      </Typography>
-                      <Timeline />
-                    </Grid>
-                    <Grid item lg={4}>
-                      <Typography variant="h5" color="text.primary" pt={1}>
-                        Project Features
-                        {/* <Features /> */}
-                      </Typography>
-                    </Grid>
-                    <Grid item lg={4}>
-                      <Typography variant="h5" color="text.primary" pt={1}>
-                        Ideas
-                      </Typography>
-                    </Grid>
+              <Box>
+                <Grid container spacing={1}>
+                  <Grid item lg={4}>
+                    <Paper elevation={2}>
+                      <Box p={1}>
+                        <Typography variant="h5" color="text.primary" pt={1}>
+                          Project Timeline
+                        </Typography>
+                        <Timeline />
+                      </Box>
+                    </Paper>
                   </Grid>
-                </Box>
-              </Paper>
+                  <Grid item lg={4}>
+                    <Paper elevation={2}>
+                      <Box p={1}>
+                        <Typography variant="h5" color="text.primary" pt={1}>
+                          Project Features
+                        </Typography>
+                        <Features />
+                      </Box>
+                    </Paper>
+                  </Grid>
+                  <Grid item lg={4}>
+                    <Paper elevation={2}>
+                      <Box p={1}>
+                        <Typography variant="h5" color="text.primary" pt={1}>
+                          Project Ideas
+                        </Typography>
+                        <Ideas />
+                      </Box>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Grid>

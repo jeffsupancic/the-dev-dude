@@ -45,72 +45,45 @@ const Blog = () => {
   }, [sortOrder, categories]);
 
   return (
-    <>
-      {/* <div>
-        {`
-      Steps followed to setup this personal portfolio:
-      1. followed create react app as a starter https://create-react-app.dev/ using the type script template chose to use npm
-      2. hosted with digital ocean apps which easily wraps this app in a contianer and created a yaml file for you https://www.digitalocean.com/ with automatic deploy on commit to main branch
-      3. added react router for code splitting
-      4. added mui v5 didn't use styled-components
-      5. added theme provider
-
-      TODO:
-      1. add more lint rules
-      2. configure prettier
-      3. enforce tests and lint rules with husky
-      4. add material ui
-      5. show some data fetching
-      6. add .env variable
-      7. add / fix unit tests on github / site
-      8. test out emotion instead of jss
-      9. mui theme - try theme creator?
-      10. custom hook for 
-      11. wire up share
-      12. wire up <3
-      13. move todo list
-      `}
-      </div> */}
-      <Grid container spacing={1}>
-        <Grid item xs={12}>
-          <Grid container spacing={1} alignItems="center">
-            <Grid item>
-              <BlogSortOrderSelect
-                sortOrder={sortOrder}
-                setSortOrder={setSortOrder}
-              />
-            </Grid>
-            <Grid item>
-              <BlogCategorySelect
-                categories={categories}
-                setCategories={setCategories}
-              />
-            </Grid>
+    <Grid container spacing={1}>
+      <Grid item xs={12}>
+        <Grid container spacing={1} alignItems="center">
+          <Grid item>
+            <BlogSortOrderSelect
+              sortOrder={sortOrder}
+              setSortOrder={setSortOrder}
+            />
+          </Grid>
+          <Grid item>
+            <BlogCategorySelect
+              categories={categories}
+              setCategories={setCategories}
+            />
           </Grid>
         </Grid>
-        {blogEntries.map((blogEntry) => {
-          return (
-            <Grid key={blogEntry.id} item xs={12}>
-              <BlogEntry
-                id={blogEntry.id}
-                categories={blogEntry.categories}
-                date={blogEntry.date}
-                title={blogEntry.title}
-                body={blogEntry.body}
-                code={blogEntry.code}
-              ></BlogEntry>
-            </Grid>
-          );
-        })}
-        {/* <Grid item xs={12}>
+      </Grid>
+      {blogEntries.map((blogEntry) => {
+        return (
+          <Grid key={blogEntry.id} item xs={12}>
+            <BlogEntry
+              id={blogEntry.id}
+              categories={blogEntry.categories}
+              date={blogEntry.date}
+              title={blogEntry.title}
+              body={blogEntry.body}
+              code={blogEntry.code}
+            ></BlogEntry>
+          </Grid>
+        );
+      })}
+      {/* <Grid item xs={12}>
           <Box textAlign="center">
             <Button color="primary" onClick={() => {}}>
               Load More...
             </Button>
           </Box>
         </Grid> */}
-      </Grid>
-    </>
+    </Grid>
   );
 };
 
