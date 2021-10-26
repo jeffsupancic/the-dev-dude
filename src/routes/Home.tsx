@@ -23,23 +23,28 @@ const Home = () => {
           <Grid item md={2}>
             <Grid
               container
-              direction="column"
               justifyContent="center"
               alignItems="center"
               spacing={1}
             >
-              <Grid item>
-                <Typography variant="h4" color={green[500]}>
+              <Grid item xs={12}>
+                <Typography align="center" variant="h4" color={green[500]}>
                   Jeff Supancic
                 </Typography>
               </Grid>
-              <Grid item>
-                <Typography variant="subtitle1" color={grey[500]}>
+              <Grid item xs={12}>
+                <Typography
+                  align="center"
+                  variant="subtitle1"
+                  color={grey[500]}
+                >
                   <i>The Dev Dude</i>
                 </Typography>
               </Grid>
-              <Grid item>
-                <Avatar src={devDudeImage} sx={{ width: 200, height: 200 }} />
+              <Grid item xs={12}>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <Avatar src={devDudeImage} sx={{ width: 200, height: 200 }} />
+                </Box>
               </Grid>
             </Grid>
           </Grid>
