@@ -127,20 +127,15 @@ const Home = () => {
                   <Grid container>
                     <Grid item xs={12}>
                       <Typography variant="body1" color="text.secondary">
-                        Hi there!
+                        <b>{`Hi there!`}</b>
                       </Typography>
                       <Typography
                         variant="body1"
                         color="text.secondary"
                         paddingTop={1}
+                        whiteSpace="pre-wrap"
                       >
-                        Thank you for visting my personal site, portfolio and
-                        playground. I'm planning to use this site as a place to
-                        learn, show off, and share some of the things I've
-                        learned working as a full stack web developer. I'll be
-                        building out a full stack web application. In support of
-                        other developers, I'll be keeping this portfolio open
-                        source through two GitHub repositories.
+                        {`  Thank you for visting my personal site, portfolio and playground.  I'm planning to use this site as a place to learn, show off, and share some of the things I've learned working as a full stack web developer.  I'll be building out a full stack web application.  In support of other developers, I'll be keeping this portfolio open source through two GitHub repositories.`}
                       </Typography>
                     </Grid>
                   </Grid>
