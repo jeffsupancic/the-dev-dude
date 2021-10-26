@@ -11,6 +11,8 @@ import { green, grey } from "@mui/material/colors";
 import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import Tooltip from "@mui/material/Tooltip";
 // dd
 import devDudeImage from "../images/thedevdude.jpeg";
 import Timeline from "../components/home/Timeline";
@@ -72,6 +74,15 @@ const Home = () => {
                     >
                       <LinkedInIcon />
                     </IconButton>
+                    <Tooltip title="jsupancic@gmail.com">
+                      <IconButton
+                        onClick={() => {
+                          window.open("mailto:jsupancic@gmail.com", "_blank");
+                        }}
+                      >
+                        <EmailIcon />
+                      </IconButton>
+                    </Tooltip>
                   </Box>
                 </Grid>
                 <Grid item xs={12}>
