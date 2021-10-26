@@ -1,9 +1,9 @@
 // react
 import { render } from "@testing-library/react";
 // dd
-import App from "./App";
+import Home from "./Home";
 
-test("App component renders", () => {
-  const { container } = render(<App />);
+test("Home component renders", () => {
+  const { container } = render(<Home />);
   expect(container.firstChild).toBeTruthy();
 });

@@ -11,7 +11,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import WebIcon from "@mui/icons-material/Web";
 import StorageIcon from "@mui/icons-material/Storage";
 
-export default function NestedList() {
+const Features = () => {
   const [frontEndOpen, setFrontEndOpen] = useState(true);
   const [backEndOpen, setBackEndOpen] = useState(true);
 
@@ -61,4 +61,6 @@ export default function NestedList() {
       </Collapse>
     </List>
   );
-}
+};
+
+export default Features;

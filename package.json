@@ -56,5 +56,13 @@
     "@types/react-router-dom": "^5.3.1",
     "@types/react-syntax-highlighter": "^13.5.2"
   },
-  "homepage": "https://jeffsupancic.github.io/the-dev-dude/"
+  "homepage": "https://jeffsupancic.github.io/the-dev-dude/",
+  "jest": {
+    "coverageReporters": [
+      "text-summary"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(react-syntax-highlighter)/)"
+    ]
+  }
 }

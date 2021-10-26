@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 // mui
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 // dd
 import blogEntriesData from "../data/blogEntries";
 import BlogEntry from "../components/blog/BlogEntry";
