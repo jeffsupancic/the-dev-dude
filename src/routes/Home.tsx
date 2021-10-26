@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <Box>
       <Grid container spacing={1}>
-        <Grid item lg={2}>
+        <Grid item xs={12} lg={2}>
           <Paper elevation={2}>
             <Box p={1}>
               <Grid
@@ -120,7 +120,7 @@ const Home = () => {
             </Box>
           </Paper>
         </Grid>
-        <Grid item lg={10}>
+        <Grid item xs={12} lg={10}>
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <Paper elevation={2}>
@@ -144,8 +144,8 @@ const Home = () => {
               </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Grid container spacing={1} display="inline-block">
-                <Grid item lg={4}>
+              <Grid container spacing={1}>
+                <Grid item xs={12} lg={4}>
                   <Paper elevation={2}>
                     <Box p={1}>
                       <Typography variant="h5" color="text.primary" pt={1}>
@@ -155,7 +155,7 @@ const Home = () => {
                     </Box>
                   </Paper>
                 </Grid>
-                <Grid item lg={4}>
+                <Grid item xs={12} lg={4}>
                   <Paper elevation={2}>
                     <Box p={1}>
                       <Typography variant="h5" color="text.primary" pt={1}>
@@ -165,7 +165,7 @@ const Home = () => {
                     </Box>
                   </Paper>
                 </Grid>
-                <Grid item lg={4}>
+                <Grid item xs={12} lg={4}>
                   <Paper elevation={2}>
                     <Box p={1}>
                       <Typography variant="h5" color="text.primary" pt={1}>
