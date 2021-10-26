@@ -96,7 +96,7 @@ export default function BlogEntry({
         alt="Paella dish"
       /> */}
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body1" color="text.secondary">
           {body}
         </Typography>
         {code && <CodeSnippet code={code} />}
