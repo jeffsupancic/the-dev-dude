@@ -8,6 +8,9 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { green, grey } from "@mui/material/colors";
+import IconButton from "@mui/material/IconButton";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // dd
 import devDudeImage from "../images/thedevdude.jpeg";
 import Timeline from "../components/home/Timeline";
@@ -18,7 +21,7 @@ const Home = () => {
   const history = useHistory();
 
   return (
-    <Box p={1}>
+    <Box>
       <Grid container spacing={1}>
         <Grid item lg={2}>
           <Paper elevation={2}>
@@ -42,6 +45,34 @@ const Home = () => {
                   >
                     <i>The Dev Dude</i>
                   </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <IconButton
+                      onClick={() => {
+                        window.open(
+                          "https://github.com/jeffsupancic",
+                          "_blank"
+                        );
+                      }}
+                    >
+                      <GitHubIcon />
+                    </IconButton>
+                    <IconButton
+                      onClick={() => {
+                        window.open(
+                          "https://www.linkedin.com/in/jeff-supancic/",
+                          "_blank"
+                        );
+                      }}
+                    >
+                      <LinkedInIcon />
+                    </IconButton>
+                  </Box>
                 </Grid>
                 <Grid item xs={12}>
                   <Box
@@ -85,14 +116,20 @@ const Home = () => {
                   <Grid container>
                     <Grid item xs={12}>
                       <Typography variant="body1" color="text.secondary">
-                        Hi there! Thank you for visting my personal site,
-                        portfolio and playground. I'm planning to use this site
-                        as a place to learn, show off, and share some of the
-                        things I've learned working as a full stack web
-                        developer. I'll be building out a full stack web
-                        application. In support of other developers, I'll be
-                        keeping this portfolio open source through two GitHub
-                        repositories.
+                        Hi there!
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        paddingTop={1}
+                      >
+                        Thank you for visting my personal site, portfolio and
+                        playground. I'm planning to use this site as a place to
+                        learn, show off, and share some of the things I've
+                        learned working as a full stack web developer. I'll be
+                        building out a full stack web application. In support of
+                        other developers, I'll be keeping this portfolio open
+                        source through two GitHub repositories.
                       </Typography>
                     </Grid>
                   </Grid>
