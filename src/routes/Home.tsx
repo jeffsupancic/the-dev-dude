@@ -18,88 +18,116 @@ const Home = () => {
   const history = useHistory();
 
   return (
-    <Paper>
-      <Box p={1}>
-        <Grid container spacing={1}>
-          <Grid item md={2}>
-            <Grid
-              container
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-            >
-              <Grid item xs={12}>
-                <Typography align="center" variant="h4" color={green[500]}>
-                  Jeff Supancic
-                </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography
-                  align="center"
-                  variant="subtitle1"
-                  color={grey[500]}
-                >
-                  <i>The Dev Dude</i>
-                </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Box display="flex" alignItems="center" justifyContent="center">
-                  <Avatar src={devDudeImage} sx={{ width: 200, height: 200 }} />
-                </Box>
-              </Grid>
-              <Grid item xs={12}>
-                <Box display="flex" alignItems="center" justifyContent="center">
-                  <Button
-                    color="info"
-                    size="small"
-                    onClick={() => {
-                      history.push("/blog");
-                    }}
-                    variant="contained"
+    <Box p={1}>
+      <Grid container spacing={1}>
+        <Grid item md={2}>
+          <Paper elevation={2}>
+            <Box p={1}>
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                spacing={1}
+              >
+                <Grid item xs={12}>
+                  <Typography align="center" variant="h4" color={green[500]}>
+                    Jeff Supancic
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography
+                    align="center"
+                    variant="subtitle1"
+                    color={grey[500]}
                   >
-                    Take me to the Dev Dude's blog
-                  </Button>
+                    <i>The Dev Dude</i>
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <Avatar
+                      src={devDudeImage}
+                      sx={{ width: 200, height: 200 }}
+                    />
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <Button
+                      color="info"
+                      size="small"
+                      onClick={() => {
+                        history.push("/blog");
+                      }}
+                      variant="contained"
+                    >
+                      Dev Dude's blog
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item md={10}>
+          <Grid container spacing={1}>
+            <Grid item xs={12}>
+              <Paper elevation={2}>
+                <Box p={1}>
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <Typography variant="body1" color="text.secondary">
+                        Hi there! Thank you for visting my personal site,
+                        portfolio and playground. I'm planning to use this site
+                        as a place to learn, show off, and share some of the
+                        things I've learned working as a full stack web
+                        developer. I'll be building out a full stack web
+                        application. In support of other developers, I'll be
+                        keeping this portfolio open source through two GitHub
+                        repositories.
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </Box>
-              </Grid>
+              </Paper>
             </Grid>
-          </Grid>
-          <Grid item md={10}>
-            <Typography variant="body1" color="text.secondary">
-              Hi there! Thank you for visting my personal site, portfolio and
-              playground. I'm planning to use this site as a place to learn,
-              show off, and share some of the things I've learned working as a
-              full stack web developer. I'll be building out a full stack web
-              application. In support of other developers, I'll be keeping this
-              portfolio open source through two GitHub repositories.
-            </Typography>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              pt={1}
-            ></Typography>
-            <Grid container>
-              <Grid item md={4}>
-                <Typography variant="h5" color="text.primary" pt={1}>
-                  Project Timeline
-                </Typography>
-                <Timeline />
-              </Grid>
-              <Grid item md={4}>
-                <Typography variant="h5" color="text.primary" pt={1}>
-                  Project Features
-                  {/* <Features /> */}
-                </Typography>
-              </Grid>
-              <Grid item md={4}>
-                <Typography variant="h5" color="text.primary" pt={1}>
-                  Ideas
-                </Typography>
-              </Grid>
+            <Grid item xs={12}>
+              <Paper elevation={2}>
+                <Box p={1}>
+                  <Grid container>
+                    <Grid item md={4}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Project Timeline
+                      </Typography>
+                      <Timeline />
+                    </Grid>
+                    <Grid item md={4}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Project Features
+                        {/* <Features /> */}
+                      </Typography>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Typography variant="h5" color="text.primary" pt={1}>
+                        Ideas
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
-      </Box>
-    </Paper>
+      </Grid>
+    </Box>
   );
 };
 
