@@ -12,8 +12,8 @@ import WebIcon from "@mui/icons-material/Web";
 import StorageIcon from "@mui/icons-material/Storage";
 
 const Ideas = () => {
-  const [frontEndOpen, setFrontEndOpen] = useState(true);
-  const [backEndOpen, setBackEndOpen] = useState(true);
+  const [frontEndOpen, setFrontEndOpen] = useState(false);
+  const [backEndOpen, setBackEndOpen] = useState(false);
 
   return (
     <List>
