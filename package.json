@@ -31,6 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "npm run test -- --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
