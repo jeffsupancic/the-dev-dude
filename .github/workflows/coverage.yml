@@ -11,3 +11,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           #   threshold: 80 # optional parameter
           test-script: npm run test:ci
+          annotations: none
