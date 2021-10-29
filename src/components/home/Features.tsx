@@ -34,10 +34,13 @@ const Features = () => {
             <ListItemText primary="TypeScript" />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="Hosting" />
+            <ListItemText primary="React" />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemText primary="Material UI" />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Hosted on Digital Ocean" />
           </ListItemButton>
         </List>
       </Collapse>
@@ -54,9 +57,9 @@ const Features = () => {
       </ListItemButton>
       <Collapse in={backEndOpen} timeout="auto" unmountOnExit>
         <List component="div">
-          {/* <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="1" />
-          </ListItemButton> */}
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="TODO" />
+          </ListItemButton>
         </List>
       </Collapse>
     </List>

@@ -45,6 +45,9 @@ const Ideas = () => {
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemText primary="Enforce lint and unit tests with husky" />
           </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Implement authn flow" />
+          </ListItemButton>
         </List>
       </Collapse>
       <ListItemButton
