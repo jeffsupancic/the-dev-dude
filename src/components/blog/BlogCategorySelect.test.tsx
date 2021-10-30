@@ -21,7 +21,6 @@ test("BlogCategorySelect category can be toggled", () => {
       setCategories={setCategories}
     />
   );
-
   fireEvent(
     getByText(container, "Front End"),
     new MouseEvent("click", {
@@ -29,6 +28,5 @@ test("BlogCategorySelect category can be toggled", () => {
       cancelable: true,
     })
   );
-
   expect(setCategories).toHaveBeenCalledTimes(1);
 });

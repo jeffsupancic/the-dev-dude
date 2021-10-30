@@ -2,21 +2,21 @@ const blogEntries = [
   {
     id: 1,
     categories: ["frontEnd", "javaScript"],
-    date: "10/24/21",
+    date: "10/24/2021",
     title: "Create React App",
     body: "This application was built by following the Create React App guide found here https://create-react-app.dev/",
   },
   {
     id: 2,
     categories: ["hosting"],
-    date: "",
+    date: "10/24/2021",
     title: "Hosting with Digital Ocean",
     body: `I wanted to be able to show this project off and easily deploy changes.  I was already familiar Digital Ocean's droplets, but saw they introduced "Apps" that make it easy to deploy code without needing to manage the server.`,
   },
   {
     id: 3,
     categories: ["javaScript"],
-    date: "10/24/24",
+    date: "10/24/2021",
     title: "Code Snippets",
     body: "I wanted to be able to show code examples, so I added the react-syntax-highlighter package to this project and created a wrapper component to be used throughout.",
     code: `
@@ -37,6 +37,32 @@ const CodeSnippet = ({ code }: CodeSnippetProps) => {
 };
 
 export default CodeSnippet;
+`,
+  },
+  {
+    id: 4,
+    categories: ["frontEnd", "javaScript"],
+    date: "10/29/2021",
+    title: "Code Snippets",
+    body: "Unit tests for this project are built with jest and testing-library/react.  testing-library/react makes testing react components simple and straightforward.  Here's an example on how to test the click handler of the filter buttons found at the top of this blog.",
+    code: `
+test("BlogCategorySelect category can be toggled", () => {
+  const setCategories = jest.fn();
+  const { container } = render(
+    <BlogCategorySelect
+      categories={["frontEnd"]}
+      setCategories={setCategories}
+    />
+  );
+  fireEvent(
+    getByText(container, "Front End"),
+    new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+    })
+  );
+  expect(setCategories).toHaveBeenCalledTimes(1);
+});    
 `,
   },
 ];
