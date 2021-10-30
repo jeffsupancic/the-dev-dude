@@ -5,6 +5,7 @@ const blogEntries = [
     date: "10/24/2021",
     title: "Create React App",
     body: "This application was built by following the Create React App guide found here https://create-react-app.dev/",
+    code: `npx create-react-app my-app --template typescript`,
   },
   {
     id: 2,
