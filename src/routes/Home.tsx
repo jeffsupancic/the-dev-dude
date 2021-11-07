@@ -14,10 +14,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import Tooltip from "@mui/material/Tooltip";
 // dd
-import devDudeImage from "../images/thedevdude.jpeg";
-import Timeline from "../components/home/Timeline";
-import Features from "../components/home/Features";
-import Ideas from "../components/home/Ideas";
+import devDudeImage from "images/thedevdude.jpeg";
+import Timeline from "components/home/Timeline";
+import Features from "components/home/Features";
+import Ideas from "components/home/Ideas";
 
 const Home = () => {
   // hooks

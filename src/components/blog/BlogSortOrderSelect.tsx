@@ -9,19 +9,16 @@ interface BlogSortOrderSelectProps {
   setSortOrder: (sortOrder: string) => void;
 }
 
-const BlogSortOrderSelect = ({
-  sortOrder,
-  setSortOrder,
-}: BlogSortOrderSelectProps) => {
+const BlogSortOrderSelect = (props: BlogSortOrderSelectProps) => {
   return (
     <FormControl>
       <InputLabel>Sort by</InputLabel>
       <Select
         size="small"
         color="info"
-        value={sortOrder}
+        value={props.sortOrder}
         onChange={(e) => {
-          setSortOrder(e.target.value);
+          props.setSortOrder(e.target.value);
         }}
       >
         <MenuItem value="newestFirst">Newest First</MenuItem>

@@ -14,7 +14,7 @@ import Stack from "@mui/material/Stack";
 // utils
 import { startCase } from "lodash";
 // dd
-import CodeSnippet from "../shared/CodeSnippet";
+import CodeSnippet from "components/shared/CodeSnippet";
 
 interface BlogEntryProps {
   id: number;

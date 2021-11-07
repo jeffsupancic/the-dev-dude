@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 // mui
 import Grid from "@mui/material/Grid";
 // dd
-import blogEntriesData from "../data/blogEntries";
-import BlogEntry from "../components/blog/BlogEntry";
-import BlogCategorySelect from "../components/blog/BlogCategorySelect";
-import BlogSortOrderSelect from "../components/blog/BlogSortOrderSelect";
+import blogEntriesData from "data/blogEntries";
+import BlogEntry from "components/blog/BlogEntry";
+import BlogCategorySelect from "components/blog/BlogCategorySelect";
+import BlogSortOrderSelect from "components/blog/BlogSortOrderSelect";
 // utils
 import { cloneDeep } from "lodash";
 
