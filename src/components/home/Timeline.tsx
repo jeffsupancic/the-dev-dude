@@ -18,7 +18,10 @@ const TimelineComponent = () => {
         <StepContent>
           <Typography variant="body2" color="text.secondary">
             GitHub &nbsp;
-            <Link href="https://github.com/jeffsupancic/the-dev-dude">
+            <Link
+              href="https://github.com/jeffsupancic/the-dev-dude"
+              target="_blank"
+            >
               the-dev-dude
             </Link>
           </Typography>
@@ -33,7 +36,10 @@ const TimelineComponent = () => {
         <StepContent>
           <Typography variant="body2" color="text.secondary">
             GitHub &nbsp;
-            <Link href="https://github.com/jeffsupancic/the-dev-dude-server">
+            <Link
+              href="https://github.com/jeffsupancic/the-dev-dude-server"
+              target="_blank"
+            >
               the-dev-dude-server
             </Link>
           </Typography>
