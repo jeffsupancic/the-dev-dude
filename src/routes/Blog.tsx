@@ -3,14 +3,32 @@ import { useEffect, useState } from "react";
 // mui
 import Grid from "@mui/material/Grid";
 // dd
-import blogEntriesData from "data/blogEntries";
 import BlogEntry from "components/blog/BlogEntry";
 import BlogCategorySelect from "components/blog/BlogCategorySelect";
 import BlogSortOrderSelect from "components/blog/BlogSortOrderSelect";
 // utils
 import { cloneDeep } from "lodash";
+// apollo
+import { gql, useQuery } from "@apollo/client";
+
+const BLOG_ENTRIES = gql`
+  query getBlogEntries {
+    blogEntries {
+      id
+      categories
+      date
+      title
+      body
+      code
+    }
+  }
+`;
 
 const Blog = () => {
+  // queries
+  const { data: blogEntriesData } = useQuery(BLOG_ENTRIES);
+
+  // state
   const [blogEntries, setBlogEntries] = useState<
     {
       id: number;
@@ -29,18 +47,21 @@ const Blog = () => {
     "javaScript",
   ]);
 
+  // lifecycles
   useEffect(() => {
-    let newBlogEntries = cloneDeep(blogEntriesData);
+    if (!blogEntriesData?.blogEntries) return;
+
+    let newBlogEntries = cloneDeep(blogEntriesData.blogEntries);
     // apply filter
-    newBlogEntries = newBlogEntries.filter((be) =>
-      be.categories.some((c) => categories.includes(c))
+    newBlogEntries = newBlogEntries.filter((be: { categories: string[] }) =>
+      be.categories.some((c: string) => categories.includes(c))
     );
     // apply sort
     if (sortOrder === "newestFirst") {
       newBlogEntries = newBlogEntries.reverse();
     }
     setBlogEntries(newBlogEntries);
-  }, [sortOrder, categories]);
+  }, [blogEntriesData, sortOrder, categories]);
 
   return (
     <Grid container spacing={1}>
