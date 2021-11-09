@@ -58,7 +58,7 @@ const Features = () => {
       <Collapse in={backEndOpen} timeout="auto" unmountOnExit>
         <List component="div">
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemText primary="TODO" />
+            <ListItemText primary="Apollo GraphQL" />
           </ListItemButton>
         </List>
       </Collapse>
