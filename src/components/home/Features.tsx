@@ -60,6 +60,9 @@ const Features = () => {
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemText primary="Apollo GraphQL" />
           </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText primary="Hosted on Digital Ocean" />
+          </ListItemButton>
         </List>
       </Collapse>
     </List>
