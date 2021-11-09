@@ -18,10 +18,16 @@ import devDudeImage from "images/thedevdude.jpeg";
 import Timeline from "components/home/Timeline";
 import Features from "components/home/Features";
 import Ideas from "components/home/Ideas";
+// import useFetch from "components/hooks/useFetch";
 
 const Home = () => {
   // hooks
   const history = useHistory();
+
+  // let { isLoading: dudesWeatherIsLoading, data: dudesWeather } = useFetch({
+  //   // url: "https://api.weather.gov/points/32.715736,-117.161087",
+  //   url: "https://api.weather.gov/gridpoints/SGX/56,13/forecast",
+  // });
 
   return (
     <Box>
