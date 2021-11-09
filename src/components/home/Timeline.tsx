@@ -24,8 +24,8 @@ const TimelineComponent = () => {
           </Typography>
         </StepContent>
       </Step>
-      <Step active>
-        <StepLabel error>
+      <Step active completed>
+        <StepLabel>
           <Typography variant="body1" color="text.secondary">
             Back End Application
           </Typography>
